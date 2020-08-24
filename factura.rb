@@ -2,11 +2,11 @@ class FacturacionKleer
     def initialize
         @imp= {
             nil: 0.0,
-            "UT" => 6.85,
-            "NV" => 8.0,
-            "TX" => 6.25,
-            "AL" => 4.0,
-            "CA" => 8.25
+            "UT" => 0.0685,
+            "NV" => 0.080,
+            "TX" => 0.0625,
+            "AL" => 0.040,
+            "CA" => 0.0825
         }
 
         @dto= {nil: 0.0}
@@ -26,7 +26,7 @@ class FacturacionKleer
         end
 
         subtotal = cantidad.to_i * precio.to_i
-        current_imp = @imp[estado.upcase]
+        current_imp = subtotal * @imp[estado.upcase]
 
         total = subtotal + current_imp
 
