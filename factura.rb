@@ -6,8 +6,11 @@ class FacturacionKleer
 
     def calcular(cantidad, precio, estado)
         validarParam(cantidad, "cantidad")
+        validarMayorZero(cantidad, "cantidad")
+
         validarParam(precio, "precio unitario")
         validarParam(estado, "estado")
+
 
         puts "#{@imp[estado]}"
 
