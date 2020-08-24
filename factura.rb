@@ -11,10 +11,11 @@ class FacturacionKleer
         validarParam(precio, "precio unitario")
         validarMayorZero(precio.to_i, "precio unitario")
 
-        validarParam(estado, "estado")
-        @imp.include? estado
-
-        puts "#{@imp[estado]}"
+        validarParam(estado, "estado")        
+        if(!@imp.include?(estado))
+            puts "El estado ingresado no es valido"
+            exit 1
+        end
 
         puts "Sub Total            : "
         puts "Impuesto (Estado: AL): "
