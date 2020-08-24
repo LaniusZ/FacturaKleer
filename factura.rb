@@ -9,8 +9,9 @@ class FacturacionKleer
         validarMayorZero(cantidad, "cantidad")
 
         validarParam(precio, "precio unitario")
-        validarParam(estado, "estado")
+        validarMayorZero(precio, "precio unitario")
 
+        validarParam(estado, "estado")
 
         puts "#{@imp[estado]}"
 
