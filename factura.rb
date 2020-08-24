@@ -8,8 +8,6 @@ class FacturacionKleer
             "AL" => 0.040,
             "CA" => 0.0825
         }
-
-        @dto= {nil: 0.0}
     end
 
     def calcular(cantidad, precio, estado)
@@ -27,13 +25,23 @@ class FacturacionKleer
 
         subtotal = cantidad.to_i * precio.to_i
         current_imp = subtotal * @imp[estado.upcase]
-
-        total = subtotal + current_imp
+        desc = calcularDesc(subtotal)
+        total = subtotal + current_imp - desc
 
         puts "Sub Total            : $#{subtotal}"
-        puts "Impuesto (Estado: #{estado.upcase}): "
-        puts "Descuento            : "
+        puts "Impuesto (Estado: #{estado.upcase}): $#{current_imp}"
+        puts "Descuento            : $#{desc}"
         puts "Total                : $#{total}"
+    end
+
+    def calcularDesc(subtotal)
+        if subtotal > 1000 and subtotal <= 5000
+            dsc = 0.03
+        else
+            dsc = 0.0
+        end
+        
+        return dsc * subtotal
     end
 
     def validarParam(param, name)
