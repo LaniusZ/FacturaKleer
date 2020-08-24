@@ -39,6 +39,8 @@ class FacturacionKleer
             dsc = 0.03
         elseif subtotal > 5000 and subtotal <= 7000
             dsc = 0.05
+        elseif subtotal > 7000 and subtotal <= 10000
+            dsc = 0.07
         else
             dsc = 0.0
         end
