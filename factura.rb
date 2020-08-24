@@ -1,6 +1,10 @@
 class FacturacionKleer
     def initialize
-        @imp= {nil: 0.0}
+        @imp= {
+            nil: 0.0,
+            "UT" => 6.85
+        }
+
         @dto= {nil: 0.0}
     end
 
