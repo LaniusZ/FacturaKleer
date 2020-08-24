@@ -8,8 +8,8 @@ ruby factura.rb <cantidad> <precio unitario> <estado>
 <table borde="1">
   <thead>
     <tr>
-      <th cellspacing="2">Impuesto</th>
-      <th cellspacing="2">Descuentos</th>
+      <th colspan="2">Impuesto</th>
+      <th colspan="2">Descuentos</th>
     </tr>
     <tr>
       <th>Estado</th>
@@ -26,15 +26,15 @@ ruby factura.rb <cantidad> <precio unitario> <estado>
       <td>3%</td>
     </tr>
     <tr>
-      <td>NV/td>
-      <td>8.00%/td>
-      <td>$5,000/td>
+      <td>NV</td>
+      <td>8.00%</td>
+      <td>$5,000</td>
       <td>5%</td>
     </tr>
     <tr>
-      <td>TX/td>
-      <td>6.25%/td>
-      <td>$7,000/td>
+      <td>TX</td>
+      <td>6.25%</td>
+      <td>$7,000</td>
       <td>7%</td>
     </tr>
     <tr>
