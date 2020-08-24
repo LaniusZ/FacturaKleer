@@ -1,6 +1,7 @@
 class FacturacionKleer
     def initialize
         @imp= {nil: 0.0}
+        @dto= {nil: 0.0}
     end
 
     def calcular(cantidad, precio, estado)
