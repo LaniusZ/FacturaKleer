@@ -5,7 +5,15 @@ Debe poder ejecutarse con la línea de comando:
 
 ruby factura.rb <cantidad> <precio unitario> <estado>
 
-|    Impuesto    |   Descuentos  |<br>
+<table borde="1">
+  <thead>
+    <tr>
+      <th cellspacing="2">Impuesto</th>
+      <th cellspacing="2">Descuentos</th>
+    </tr>
+  </thead>
+</table>
+|        |   Descuentos  |<br>
 | Estado | Tasa  | Más de  |  %  |<br>
 |   UT   | 6.85% | $1,000  | 3%  |<br>
 |   NV   | 8.00% | $5,000  | 5%  |<br>
