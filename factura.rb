@@ -5,7 +5,8 @@ class FacturacionKleer
             "UT" => 6.85,
             "NV" => 8.0,
             "TX" => 6.25,
-            "AL" => 4.0
+            "AL" => 4.0,
+            "CA" => 8.25
         }
 
         @dto= {nil: 0.0}
