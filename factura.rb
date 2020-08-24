@@ -6,12 +6,13 @@ class FacturacionKleer
 
     def calcular(cantidad, precio, estado)
         validarParam(cantidad, "cantidad")
-        validarMayorZero(cantidad, "cantidad")
+        validarMayorZero(cantidad.to_i, "cantidad")
 
         validarParam(precio, "precio unitario")
-        validarMayorZero(precio, "precio unitario")
+        validarMayorZero(precio.to_i, "precio unitario")
 
         validarParam(estado, "estado")
+        @imp.include? estado
 
         puts "#{@imp[estado]}"
 
@@ -29,7 +30,7 @@ class FacturacionKleer
     end
 
     def validarMayorZero(param, name)
-        if(param > 0)
+        if(param < 1)
             puts "#{name} debe ser mayor que 0"
             exit 1
         end
