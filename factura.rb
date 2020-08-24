@@ -15,7 +15,7 @@ class FacturacionKleer
         validarMayorZero(cantidad.to_i, "cantidad")
 
         validarParam(precio, "precio unitario")
-        validarMayorZero(precio.to_i, "precio unitario")
+        validarMayorZero(precio.to_f, "precio unitario")
 
         validarParam(estado, "estado")        
         if(!@imp.include?(estado.upcase))
@@ -23,7 +23,7 @@ class FacturacionKleer
             exit 1
         end
 
-        subtotal = cantidad.to_i * precio.to_i
+        subtotal = cantidad.to_i * precio.to_f
         current_imp = subtotal * @imp[estado.upcase]
         desc = calcularDesc(subtotal)
         total = subtotal + current_imp - desc
@@ -50,7 +50,7 @@ class FacturacionKleer
             else
                 dsc = 0.15
         end
-        
+
         return dsc * subtotal
     end
 
