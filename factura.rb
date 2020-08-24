@@ -37,6 +37,8 @@ class FacturacionKleer
     def calcularDesc(subtotal)
         if subtotal > 1000 and subtotal <= 5000
             dsc = 0.03
+        elseif subtotal > 5000 and subtotal <= 7000
+            dsc = 0.05
         else
             dsc = 0.0
         end
