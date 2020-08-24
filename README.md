@@ -14,9 +14,10 @@ ruby factura.rb <cantidad> <precio unitario> <estado>
 |   CA   | 8.25% | $50,000 | 15% |
 
 
-Ejemplo
+# Ejemplo
 ruby factura.rb 5 10 AL
-# 5 * $10 = $50
+(internamente)
+5 * $10 = $50
 AL(%4.0) = $2
 DTO(%0) = $0
 Total = $52
