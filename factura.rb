@@ -1,12 +1,14 @@
 class FacturacionKleer
     def initialize
-        
+        @imp= {nil: 0.0}
     end
 
     def calcular(cantidad, precio, estado)
         validarParam(cantidad, "cantidad")
         validarParam(precio, "precio unitario")
         validarParam(estado, "estado")
+
+        puts "#{@imp[estado]}"
 
         puts "Sub Total            : "
         puts "Impuesto (Estado: AL): "
