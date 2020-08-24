@@ -11,21 +11,51 @@ ruby factura.rb <cantidad> <precio unitario> <estado>
       <th cellspacing="2">Impuesto</th>
       <th cellspacing="2">Descuentos</th>
     </tr>
+    <tr>
+      <th>Estado</th>
+      <th>Tasa</th>
+      <th>Más de</th>
+      <th> %</th>
+    </tr>
   </thead>
+  <tbody>
+    <tr>
+      <td>UT</td>
+      <td>6.85%</td>
+      <td>$1,000</td>
+      <td>3%</td>
+    </tr>
+    <tr>
+      <td>NV/td>
+      <td>8.00%/td>
+      <td>$5,000/td>
+      <td>5%</td>
+    </tr>
+    <tr>
+      <td>TX/td>
+      <td>6.25%/td>
+      <td>$7,000/td>
+      <td>7%</td>
+    </tr>
+    <tr>
+      <td>AL/td>
+      <td>4.00%/td>
+      <td>$10,000/td>
+      <td>10%</td>
+    </tr>
+    <tr>
+      <td>CA/td>
+      <td>8.25%/td>
+      <td>$50,000/td>
+      <td>15%</td>
+    </tr>
+  </tbody>    
 </table>
-|        |   Descuentos  |<br>
-| Estado | Tasa  | Más de  |  %  |<br>
-|   UT   | 6.85% | $1,000  | 3%  |<br>
-|   NV   | 8.00% | $5,000  | 5%  |<br>
-|   TX   | 6.25% | $7,000  | 7%  |<br>
-|   AL   | 4.00% | $10,000 | 10% |<br>
-|   CA   | 8.25% | $50,000 | 15% |<br>
-
 
 # Ejemplo
-ruby factura.rb 5 10 AL
-(internamente)
-5 * $10 = $50
-AL(%4.0) = $2
-DTO(%0) = $0
+ruby factura.rb 5 10 AL<br>
+(internamente)<br>
+5 * $10 = $50<br>
+AL(%4.0) = $2<br>
+DTO(%0) = $0<br>
 Total = $52
