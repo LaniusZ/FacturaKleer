@@ -38,15 +38,15 @@ ruby factura.rb <cantidad> <precio unitario> <estado>
       <td>7%</td>
     </tr>
     <tr>
-      <td>AL/td>
-      <td>4.00%/td>
-      <td>$10,000/td>
+      <td>AL</td>
+      <td>4.00%</td>
+      <td>$10,000</td>
       <td>10%</td>
     </tr>
     <tr>
-      <td>CA/td>
-      <td>8.25%/td>
-      <td>$50,000/td>
+      <td>CA</td>
+      <td>8.25%</td>
+      <td>$50,000</td>
       <td>15%</td>
     </tr>
   </tbody>    
