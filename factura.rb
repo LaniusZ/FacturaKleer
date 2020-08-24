@@ -23,6 +23,13 @@ class FacturacionKleer
             exit 1
         end
     end
+
+    def validarMayorZero(param, name)
+        if(param > 0)
+            puts "#{name} debe ser mayor que 0"
+            exit 1
+        end
+    end
 end
 
 fact = FacturacionKleer.new
